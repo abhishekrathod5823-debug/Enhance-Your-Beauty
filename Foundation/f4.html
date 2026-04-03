@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Beauty - Product Selection</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- CSS SECTION --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(180deg, #FAD6E7 0%, #FAF1C6 100%);
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header & Nav */
+        .brand-title {
+            font-family: 'Pinyon Script', cursive;
+            font-size: 3.5rem;
+            margin-top: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px 0;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Main Selection Card */
+        .product-selection-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 60px;
+            text-align: left;
+            flex-wrap: wrap;
+        }
+
+        /* Image Styling */
+        .product-image {
+            width: 250px;
+            height: 250px;
+            background-color: #BDD4D8; /* Background color as per SS */
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-image img {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Detail Section */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        /* Inputs Styling */
+        .shade-box, .qty-dropdown {
+            background: white;
+            border: none;
+            padding: 5px 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            width: 150px;
+            outline: none;
+        }
+
+        /* Submit Button Link */
+        .submit-link {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 10px 20px;
+            margin-top: 20px;
+            width: 100%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .submit-link:hover {
+            background-color: #000;
+            color: #fff;
+            transform: scale(1.02);
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 600px) {
+            .product-selection-box { flex-direction: column; text-align: center; }
+            .input-group { flex-direction: column; }
+            .brand-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="brand-title">Elegant Beauty</h1>
+        
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Product</a>
+            <a href="#">Buy-Cart</a>
+            <a href="#">My Account</a>
+        </nav>
+
+        <div class="product-selection-box">
+            
+            <div class="product-image">
+                <img src="f4.jpg" alt="YSL Lipstick">
+            </div>
+
+            <div class="product-details">
+                <h2 class="product-name">YSL</h2>
+                
+                <div class="input-group">
+                    <span>Shade:</span>
+                    <input type="text" class="shade-box" value="Peach" readonly>
+                </div>
+
+                <div class="input-group">
+                    <span>Quantity:</span>
+                    <select class="qty-dropdown">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+                <a href="last.html" class="submit-link">Submit</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
