@@ -1,0 +1,144 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Gradient Background (Pink se Cream) */
+    background: linear-gradient(180deg, #FAD6E7 0%, #FAF1C6 100%);
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header & Brand */
+.brand-title {
+    font-family: 'Pinyon Script', cursive; /* Elegant Font */
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.header-divider, .hero-divider {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid black;
+    margin-bottom: 50px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.hero-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-subheading {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.hero-divider {
+    margin-bottom: 80px;
+}
+
+/* Product Grid (Main Part) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
+    gap: 150px 100px; /* Vertical and Horizontal Gap */
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-bottom: 50px;
+}
+
+/* Product Card Link (yahan hum animation apply karenge) */
+.product-card {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 40px; /* Rounded corners */
+    overflow: hidden; /* Taaki image aur text corners ke bahar na jaein */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Shuru mein halka shadow */
+    
+    /* Smooth transition animation ke liye */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    width: 260px; /* Card ki exact Width */
+    height: 170px; /* Card ki exact Height */
+    object-fit: cover; /* Image image crop karega, stretch nahi */
+    display: block;
+}
+
+/* Product Text Label */
+.product-label {
+    position: absolute;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.85); /* Semitransparent white */
+    padding: 8px 15px;
+    border-radius: 20px; /* Pill shape */
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    
+    /* Smooth text appearance for animation */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- ANIMATION (Hover Effect) --- */
+
+/* Jab user card par mouse leke jaye */
+.product-card:hover {
+    /* 1. Scale up: Thoda bada ho jaye */
+    transform: scale(1.05); 
+    
+    /* 2. Glow effect: Shadow bada aur soft ho jaye */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); 
+    
+    /* 3. Mouse pointer cursor badle */
+    cursor: pointer; 
+}
+
+/* Jab card hover ho, tab label ka styling bhi halka badle */
+.product-card:hover .product-label {
+    background-color: white; /* Zyada safed ho jaye */
+    color: #cc0000; /* Text ka rang change karein (optional cosmetic change) */
+}
